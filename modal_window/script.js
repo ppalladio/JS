@@ -22,3 +22,10 @@ btnCloseModal.addEventListener('click', (_e) => {
 overlay.addEventListener('click', (_e) => {
     closeModal();
 });
+
+//: esc close
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) 
+	closeModal();
+});
